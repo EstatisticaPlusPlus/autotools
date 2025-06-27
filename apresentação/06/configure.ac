@@ -2,6 +2,7 @@ AC_INIT([2.781pp], [2.781])
 
 m4_include([m4/checks.m4])
 
+# C Standards
 CHECK_CFLAG([-ansi])
 CHECK_CFLAG([-std=c89])
 CHECK_CFLAG([-std=c90])
@@ -12,9 +13,6 @@ CHECK_CFLAG([-std=c1x])
 CHECK_CFLAG([-std=c18])
 CHECK_CFLAG([-std=c23])
 CHECK_CFLAG([-std=c2x])
-CHECK_CFLAG([-O1])
-CHECK_CFLAG([-O2])
-CHECK_CFLAG([-O3])
 
 # GNU dialects of c
 CHECK_CFLAG([-std=gnu89])
@@ -28,6 +26,19 @@ CHECK_CFLAG([-std=gnu18])
 CHECK_CFLAG([-std=gnu23])
 CHECK_CFLAG([-std=gnu2x])
 
+# Some more common flags
+CHECK_CFLAG([-O1])
+CHECK_CFLAG([-O2])
+CHECK_CFLAG([-O3])
+CHECK_CFLAG([-g])
+CHECK_CFLAG([-ggdb3])
+CHECK_CFLAG([-Wall])
+CHECK_CFLAG([-Wextra])
+CHECK_CFLAG([-Werror])
+CHECK_CFLAG([-Wpedantic])
+CHECK_CFLAG([-fsanitize=address])
+
+# Specific C flags
 CHECK_CFLAG([-fno-asm])
 CHECK_CFLAG([-fno-builtin])
 CHECK_CFLAG([-fno-builtin-function])
@@ -43,6 +54,7 @@ CHECK_CFLAG([-fsigned-char])
 CHECK_CFLAG([-funsigned-char])
 CHECK_CFLAG([-fstrict-flex-arrays])
 
+# C++ Standards
 CHECK_CXXFLAG([-ansi])
 CHECK_CXXFLAG([-std=c++98])
 CHECK_CXXFLAG([-std=c++03])
@@ -58,10 +70,6 @@ CHECK_CXXFLAG([-std=c++23])
 CHECK_CXXFLAG([-std=c++2b])
 CHECK_CXXFLAG([-std=c++26])
 CHECK_CXXFLAG([-std=c++2c])
-
-CHECK_CXXFLAG([-O1])
-CHECK_CXXFLAG([-O2])
-CHECK_CXXFLAG([-O3])
 
 # GNU dialects of c++
 CHECK_CXXFLAG([-std=gnu++98])
@@ -79,6 +87,19 @@ CHECK_CXXFLAG([-std=gnu++2b])
 CHECK_CXXFLAG([-std=gnu++2c])
 CHECK_CXXFLAG([-std=gnu++26])
 
+# Some more common flags
+CHECK_CXXFLAG([-O1])
+CHECK_CXXFLAG([-O2])
+CHECK_CXXFLAG([-O3])
+CHECK_CXXFLAG([-g])
+CHECK_CXXFLAG([-ggdb3])
+CHECK_CXXFLAG([-Wall])
+CHECK_CXXFLAG([-Wextra])
+CHECK_CXXFLAG([-Werror])
+CHECK_CXXFLAG([-Wpedantic])
+CHECK_CXXFLAG([-fsanitize=address])
+
+# Specific C++ flags
 CHECK_CXXFLAG([-faligned-new])
 CHECK_CXXFLAG([-fchar8_t])
 CHECK_CXXFLAG([-fno-char8_t])
@@ -90,11 +111,13 @@ CHECK_CXXFLAG([-fmodules])
 CHECK_CXXFLAG([-fno-modules])
 CHECK_CXXFLAG([-nostdinc++])
 
+# Testing based on the gfortran command
 CHECK_FCFLAG([-std=gnu])
 CHECK_FCFLAG([-std=f95])
 CHECK_FCFLAG([-std=f2003])
 CHECK_FCFLAG([-std=legacy])
 
+# Some more common Fortran flags
 CHECK_FCFLAG([-O3])
 CHECK_FCFLAG([-O0])
 CHECK_FCFLAG([-O1])
@@ -102,6 +125,8 @@ CHECK_FCFLAG([-O2])
 CHECK_FCFLAG([-O3])
 CHECK_FCFLAG([-g])
 CHECK_FCFLAG([-cpp])
+
+# GFortran Flags
 CHECK_FCFLAG([-ffree-form])
 CHECK_FCFLAG([-ffixed-form])
 CHECK_FCFLAG([-fd-lines-as-code])
