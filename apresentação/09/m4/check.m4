@@ -5,10 +5,10 @@ AC_DEFUN(check_char_sign, [
         #include <stdio.h>
 
         int main(int argc, char *argv[]) {
-            char c = 0;
-            --c;
+            char bbb = 0;
+            --bbb;
 
-            if (c == -1) {
+            if (bbb == -1) {
                 return 1;
             } else {
                 return 0;
