@@ -1,4 +1,4 @@
-AC_INIT([epp], [7.38])
+AC_INIT([epp], [20.08])
 
 AC_PROG_CC
 
