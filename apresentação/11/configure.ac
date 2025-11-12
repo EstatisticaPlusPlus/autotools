@@ -12,7 +12,8 @@ bbb=0
 define_c_sizes
 define_fortran_sizes
 
-AC_MSG_NOTICE(epp: $epp_cv_sizeof_integer)
+AC_MSG_NOTICE(epp: $epp_fortran_sizeof_integer)
+AC_MSG_NOTICE(epp: $epp_fortran_sizeof_real)
 
 # compare_sizes([c_int],
 #               [$ac_cv_sizeof_int],
