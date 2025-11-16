@@ -23,7 +23,7 @@ AC_DEFUN([define_fortran_sizes], [
 # $3 => Nome da segunda variável
 # $4 => Valor da segunda variável
 AC_DEFUN([epp_compare_sizes], [
-    AC_MSG_NOTICE(Comparing sizes of $1 and $3)
+    AC_MSG_CHECKING(sizes of $1 vs $3)
 
     AS_IF(
     [test $2 -gt $4], [AC_MSG_RESULT($1 > $3)],

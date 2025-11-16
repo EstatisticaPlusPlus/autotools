@@ -12,13 +12,20 @@ bbb=0
 define_c_sizes
 define_fortran_sizes
 
-AC_MSG_NOTICE(epp: $epp_fortran_sizeof_integer)
-AC_MSG_NOTICE(epp: $epp_fortran_sizeof_real)
-
 epp_compare_sizes([c_int],
-              [$ac_cv_sizeof_int],
-              [fortan_int],
-              [$epp_fortran_sizeof_integer])
+                  [$ac_cv_sizeof_int],
+                  [fortan_int],
+                  [$epp_fortran_sizeof_integer])
+
+epp_compare_sizes([c_float],
+                  [$ac_cv_sizeof_float],
+                  [fortan_real],
+                  [$epp_fortran_sizeof_real])
+
+epp_compare_sizes([c_double],
+                  [$ac_cv_sizeof_double],
+                  [fortan_real],
+                  [$epp_fortran_sizeof_real])
 
 epp_compare_sizes([bcc], [$bcc], [bbb], [$bbb])
 epp_compare_sizes([bcc], [$bcc], [mb], [$mb])
